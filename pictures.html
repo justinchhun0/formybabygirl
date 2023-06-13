@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Why We Should Get Back Together</title>
+  <link rel="stylesheet" href="style.css"> <!-- Create a separate CSS file for styling -->
+</head>
+<body>
+   <div class="d-flex flex-column justify-content-center w-100 h-100">
+    <audio id="background-audio" src="calling.mp3" loop controls></audio>
+  
+    <header>
+    <h1>Why I Should Be Your Boyfriend Again</h1>
+    <!-- Add a romantic image or a picture of both of you -->
+  </header>
+  
+  <nav>
+    <button><a href="home.html">Home</a></button>
+    <button><a href="videos.html">Videos</a></button>
+    <button><a href="memories.html">Memories</a></button>
+  </nav>
+</br>
+
+  <div class="slideshow-container">
+    <img class="slideshow-image active" src="images/kiss.jpeg" alt="Image 1">
+    <img class="slideshow-image" src="images/kiss1.jpg" alt="Image 2">
+    <img class="slideshow-image" src="images/rave.jpg" alt="Image 3">
+    <img class="slideshow-image" src="images/bayy.jpg" alt="Image 4">
+    <img class="slideshow-image" src="images/bday.jpg" alt="Image 5">
+    <img class="slideshow-image" src="images/beach.jpg" alt="Image 6">
+    <img class="slideshow-image" src="images/dinner.jpg" alt="Image 7">
+    <img class="slideshow-image" src="images/hart.jpg" alt="Image 8">
+    <img class="slideshow-image" src="images/lights.jpg" alt="Image 9">
+    <img class="slideshow-image" src="images/nice.jpg" alt="Image 10">
+    <img class="slideshow-image" src="images/val.jpg" alt="Image 11">
+    <img class="slideshow-image" src="images/date.jpg" alt="Image 12">
+    <img class="slideshow-image" src="images/christmas.jpg" alt="Image 13">
+    <img class="slideshow-image" src="images/sleepover.jpg" alt="Image 14">
+    <img class="slideshow-image" src="images/mask.jpg" alt="Image 15">
+    <img class="slideshow-image" src="images/movies.jpeg" alt="Image 16">
+    <img class="slideshow-image" src="images/match.jpg" alt="Image 17">
+    <img class="slideshow-image" src="images/bite.jpg" alt="Image 18">
+    <img class="slideshow-image" src="images/vivid.jpg" alt="Image 19">
+    <img class="slideshow-image" src="images/cream.jpg" alt="Image 20">
+    <img class="slideshow-image" src="images/heart.jpg" alt="Image 21">
+    <img class="slideshow-image" src="images/kae.jpg" alt="Image 22">
+    <img class="slideshow-image" src="images/car.jpg" alt="Image 23">
+    <img class="slideshow-image" src="images/flower.jpg" alt="Image 24">
+    <img class="slideshow-image" src="images/couple.jpg" alt="Image 25">
+    <!-- Add more images as needed -->
+
+  </br>
+  <div class="slideshow-buttons">
+    <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+    <button class="next" onclick="changeSlide(1)">&#10095;</button>
+  </div>
+  </div>
+
+  <footer>
+    <p>Your Future Boyfriend, Husband, Baby Daddy and Lover - Justin Bun Chhun</p>
+  </footer>
+  </div>
+  </body>
+</html>
+  
+
+<script>
+     // JavaScript code for slideshow functionality
+     var slides = Array.from(document.getElementsByClassName("slideshow-image"));
+
+// Shuffle the array of slides
+function shuffleSlides() {
+  for (var i = slides.length - 1; i > 0; i--) {
+    var j = Math.floor(Math.random() * (i + 1));
+    var temp = slides[i];
+    slides[i] = slides[j];
+    slides[j] = temp;
+  }
+}
+
+shuffleSlides(); // Shuffle the slides array initially
+var slideIndex = 0;
+showSlide(slideIndex);
+
+function changeSlide(n) {
+  showSlide(slideIndex += n);
+}
+
+function showSlide(n) {
+  if (n >= slides.length) {
+    slideIndex = 0;
+  } else if (n < 0) {
+    slideIndex = slides.length - 1;
+  }
+
+  for (var i = 0; i < slides.length; i++) {
+    slides[i].classList.remove("active");
+  }
+
+  slides[slideIndex].classList.add("active");
+}
+
+
+  // Automatic slideshow
+  setInterval(function() {
+    changeSlide(1);
+  }, 3000); // Change slide every 3 seconds (adjust the duration as needed)
+
+
+
+</script>
